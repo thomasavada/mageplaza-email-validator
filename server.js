@@ -53,7 +53,7 @@ app.get('/', (req, res, next) => res.send('Running'))
 // index page 
 app.get('/mass', function(req, res) {
 
-    var tagline = "Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.";
+    var tagline = "";
 
     res.render('index', {
         results: [],
@@ -97,7 +97,7 @@ app.post('/emails/', async function(req, res, next) {
 });
 
 
-app.get('/wakemydyno.txt', function(req, res, next) {
+app.get('/wakemydyno.txt', function() {
     res.sendFile(__dirname + "/wakemydyno.txt");
 });
 
