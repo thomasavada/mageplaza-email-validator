@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body class="container">
+
+<form action="/emails" method="post">
+	<div class="row">
+	<div class="col-md-3 col-sm-12">
+		<div class="form-group">
+		  <label for="input-email">Enter emails</label>
+		  <textarea class="form-control rounded-0" id="input-email" name="email" rows="10" placeholder="Enter emails to check"></textarea>
+		</div>
+	</div>
+	<div class="col-md-3 col-sm-12">
+		<div class="form-group">
+		  <label for="good-email">Good Emails</label>
+		  <textarea class="form-control rounded-0" id="good-email" rows="10">
+		  </textarea>
+		</div>
+	</div>
+	<div class="col-md-3 col-sm-12">
+		<div class="form-group">
+		  <label for="unsure-email">Unsure Emails</label>
+		  <textarea class="form-control rounded-0" id="unsure-email" rows="10"></textarea>
+		</div>
+	</div>
+	<div class="col-md-3 col-sm-12">
+		<div class="form-group">
+		  <label for="bad-email">Bad Emails</label>
+		  <textarea class="form-control rounded-0" id="bad-email" rows="10"></textarea>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="btn-toolbar">
+	    <button id="validate" type="submit" class="btn btn-lg btn-info">Process</button>
+	    <button id="clear" type="button" class="btn btn-lg btn-info">Clear Form</button>
+		
+		<input class="form-check-input" type="checkbox" id="autoclear" value="1">
+		<label class="form-check-label" for="autoclear">Auto Clear Input</label>
+
+	</div>
+</div>
+</form>
+
+<script src="/js/validateEmail.js"></script>
+</body>
+</html>
