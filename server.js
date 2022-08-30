@@ -2,7 +2,9 @@ const EmailValidator = require('email-deep-validator');
 const bodyParser = require('body-parser');
 
 const express = require('express');
+const cors = require('cors');
 const app = express();
+app.use(cors())
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -50,7 +52,7 @@ async function validateEmail(email) {
 app.get('/', (req, res, next) => res.send('Running'))
 // use res.render to load up an ejs view file
 
-// index page 
+// index page
 app.get('/mass', function(req, res) {
 
     var tagline = "";
